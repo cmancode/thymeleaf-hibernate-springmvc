@@ -1,0 +1,14 @@
+table, h3 {
+	margin-left: 25%;
+	width: 50%;
+}
+
+td {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+th {
+	background-color: aqua;
+}
+
