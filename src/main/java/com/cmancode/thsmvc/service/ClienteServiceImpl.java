@@ -2,6 +2,8 @@ package com.cmancode.thsmvc.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +12,7 @@ import com.cmancode.thsmvc.exeptions.InstanceNotFoundException;
 import com.cmancode.thsmvc.model.Cliente;
 
 @Service("clienteService")
+@Transactional
 public class ClienteServiceImpl implements IClienteService{
 
 	
@@ -17,6 +20,7 @@ public class ClienteServiceImpl implements IClienteService{
 	private IClienteDao clienteDao;
 	
 	@Override
+	@Transactional
 	public List<Cliente> clientes() {
 		List<Cliente> clientes = null;
 		try {
